@@ -872,11 +872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\OrakoloSamuel\\ReadCSV\\ReadCSV.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\OrakoloSamuel\\ReadCSV\\ReadCSV.csproj",
       "projectName": "ReadCSV",
-      "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\OrakoloSamuel\\ReadCSV\\ReadCSV.csproj",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\OrakoloSamuel\\ReadCSV\\ReadCSV.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\OrakoloSamuel\\ReadCSV\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\OrakoloSamuel\\ReadCSV\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
