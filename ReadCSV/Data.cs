@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ReadCSV {
-    class Person {
+    class Data {
 
         private Dictionary<string,string> dict;
 
@@ -12,7 +12,7 @@ namespace ReadCSV {
             set { dict = value; }
         }
 
-        public Person() {
+        public Data() {
             this.Pairs = new Dictionary<string, string>();
         }
 

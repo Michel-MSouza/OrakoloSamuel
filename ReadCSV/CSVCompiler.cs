@@ -17,9 +17,9 @@ namespace ReadCSV {
 
         private string _path;
 
-        private List<Person> people;
+        private List<Data> people;
 
-        public List<Person> People {
+        public List<Data> People {
             get { return people; }
             set { people = value; }
         }
@@ -30,7 +30,7 @@ namespace ReadCSV {
         }
 
         public CSVCompiler() {
-            this.People = new List<Person>();
+            this.People = new List<Data>();
             this.Header = new List<string>();
         }
 
@@ -43,7 +43,7 @@ namespace ReadCSV {
                 string currentLine = reader.ReadLine();
                 string gettingFormat = "";
                 for (int i = 0; i < currentLine.Length; i++) {
-                    if (currentLine[i] != ',')
+                    if (currentLine[i] != ';')
                         gettingFormat += currentLine[i];
                     else {
                         //Console.WriteLine(gettingFormat);
@@ -64,10 +64,10 @@ namespace ReadCSV {
                     gettingFormat = "";
                     //Console.WriteLine(currentLine);
                     int DicPage = 0;
-                    Person p = new Person();
+                    Data p = new Data();
                     for (int i = 0; i < currentLine.Length; i++) {
 
-                        if (currentLine[i] != ',')
+                        if (currentLine[i] != ';')
                             gettingFormat += currentLine[i];
                         else {
                             //Console.WriteLine(gettingFormat);

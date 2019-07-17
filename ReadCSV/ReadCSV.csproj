@@ -9,4 +9,16 @@
     <PackageReference Include="CsvHelper" Version="12.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Planilhas\Planilha1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Planilhas\PlanilhaProjetoTeste2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Planilhas\PlanilhaProjetoTeste3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

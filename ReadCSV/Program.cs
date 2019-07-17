@@ -1,27 +1,32 @@
 ﻿using CsvHelper;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 
 namespace ReadCSV {
     class Program {
         static void Main(string[] args) {
-            string path = "C:/Users/Usuario/source/repos/ReadCSV/ReadCSV/PlanilhaProjetoTeste2.csv";
+            //string path = "C:/Users/Usuario/source/repos/OrakoloSamuel/ReadCSV/PlanilhaProjetoTeste3.csv";
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            string fileName = "PlanilhaProjetoTeste3.csv";
+            string pathRelative = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Planilhas",fileName);
+            Console.WriteLine(pathRelative);
             CSVCompiler planilha = new CSVCompiler();
             List<string> VectorType = new List<string>();
             //Dictionary<string, string> dict = new Dictionary<string, string>();
-                planilha.GetPath(path);
-                planilha.GetHeader();
-                planilha.CompileCSV();
+            planilha.GetPath(pathRelative);
+            planilha.GetHeader();
+            planilha.CompileCSV();
 
-                for(int i = 0; i < planilha.People.Count; ++i) {
-                    foreach (KeyValuePair<string, string> kv in planilha.People[i].Pairs) {
-                        Console.WriteLine(kv.Key + ": " + kv.Value);
-                    }
-                    Console.WriteLine("");
+            for(int i = 0; i < planilha.People.Count; ++i) {
+                foreach (KeyValuePair<string, string> kv in planilha.People[i].Pairs) {
+                    Console.WriteLine(kv.Key + ": " + kv.Value);
                 }
-            
-        }
+                Console.WriteLine("");
+                }
+            }
     }
 }
 
