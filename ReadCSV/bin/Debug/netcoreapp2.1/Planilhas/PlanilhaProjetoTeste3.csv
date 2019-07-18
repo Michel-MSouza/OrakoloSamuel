@@ -1,4 +1,4 @@
-Data; Status Operação ;Periodo;Carteira;Ativo;Time Frame;Código;Direção;Qtd;Compra;Venda;Stop;% Stop;Objetivo;% Objetivo;Estratégia;Resul. (%);Resul (pts);$ Bruto;$ Custo;$ Líquido;$ Custo Acum.;$ Bruto Acum.; Disciplina 
+Data;Status Operação ;Periodo;Carteira;Ativo;Time Frame;Código;Direção;Qtd;Compra;Venda;Stop;% Stop;Objetivo;% Objetivo;Estratégia;Resul. (%);Resul (pts);$ Bruto;$ Custo;$ Líquido;$ Custo Acum.;$ Bruto Acum.;Disciplina 
 17/04/17; Fechado ;abr/17;DAY TRADE;DOLAR;SCALPER;WDOJ17;Venda;3;3116;3114,5;3116,5;-0,02%;3112,5;0,11%;Leil„o;-0,05%;-1,5;-$ 45;$ 4;-$ 49;$ 4;-$ 45;1
 17/04/17; Fechado ;abr/17;DAY TRADE;DOLAR;SCALPER;WDOJ17;Compra;1;3112;3109,5;3110;-0,06%;3114;0,06%;Chic?;-0,08%;-2,5;-$ 25;$ 1;-$ 26;$ 5;-$ 70;1
 18/04/17; Fechado ;abr/17;DAY TRADE;DOLAR;SCALPER;WDOK17;Compra;1;3117,5;3118,5;3115,5;-0,06%;3119,5;0,06%;Leil„o;0,03%;1;$ 10;$ 1;$ 9;$ 7;-$ 60;1

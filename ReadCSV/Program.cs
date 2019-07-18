@@ -20,13 +20,25 @@ namespace ReadCSV {
             planilha.GetHeader();
             planilha.CompileCSV();
 
-            for(int i = 0; i < planilha.People.Count; ++i) {
+            /*for(int i = 0; i < planilha.People.Count; ++i) {
                 foreach (KeyValuePair<string, string> kv in planilha.People[i].Pairs) {
                     Console.WriteLine(kv.Key + ": " + kv.Value);
                 }
                 Console.WriteLine("");
-                }
+            }*/
+            //Console.WriteLine(planilha.People.Count.ToString());
+            float comp = 0;
+            float venda = 0;
+            for(int i = 0; i < planilha.People.Count; i++) {
+                float compT, vendaT;
+                float.TryParse(planilha.People[i].Pairs["Compra"], out compT);
+                float.TryParse(planilha.People[i].Pairs["Venda"], out vendaT);
+                //Console.WriteLine(planilha.People[i].Pairs["Venda"] + "=" + venda);
+                comp += compT;
+                venda += vendaT;
             }
+            Console.WriteLine((comp-venda)/planilha.People.Count);
+        }          
     }
 }
 
