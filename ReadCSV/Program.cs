@@ -8,37 +8,28 @@ using System.Reflection;
 namespace ReadCSV {
     class Program {
         static void Main(string[] args) {
-            //string path = "C:/Users/Usuario/source/repos/OrakoloSamuel/ReadCSV/PlanilhaProjetoTeste3.csv";
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string fileName = "PlanilhaProjetoTeste3.csv";
-            string pathRelative = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Planilhas",fileName);
-            Console.WriteLine(pathRelative);
-            CSVCompiler planilha = new CSVCompiler();
-            List<string> VectorType = new List<string>();
-            //Dictionary<string, string> dict = new Dictionary<string, string>();
-            planilha.GetPath(pathRelative);
-            planilha.GetHeader();
-            planilha.CompileCSV();
+            string ProjectName = "ReadCSV";  
+            string ShortPath = PathMaker(ProjectName,fileName, AppDomain.CurrentDomain.BaseDirectory); 
 
-            /*for(int i = 0; i < planilha.People.Count; ++i) {
-                foreach (KeyValuePair<string, string> kv in planilha.People[i].Pairs) {
-                    Console.WriteLine(kv.Key + ": " + kv.Value);
-                }
-                Console.WriteLine("");
-            }*/
-            //Console.WriteLine(planilha.People.Count.ToString());
-            float comp = 0;
-            float venda = 0;
-            for(int i = 0; i < planilha.People.Count; i++) {
-                float compT, vendaT;
-                float.TryParse(planilha.People[i].Pairs["Compra"], out compT);
-                float.TryParse(planilha.People[i].Pairs["Venda"], out vendaT);
-                //Console.WriteLine(planilha.People[i].Pairs["Venda"] + "=" + venda);
-                comp += compT;
-                venda += vendaT;
-            }
-            Console.WriteLine((comp-venda)/planilha.People.Count);
-        }          
+            DataCompilator dataCompilator = new DataCompilator();
+            dataCompilator.CSV.SetPath(ShortPath);
+            dataCompilator.ExtractCSVData(fileName);
+            fileName = "Planilha1.csv";
+            dataCompilator.setPath(PathMaker(ProjectName, fileName, AppDomain.CurrentDomain.BaseDirectory));
+            dataCompilator.ExtractCSVData(fileName);
+            dataCompilator.ListData();
+
+
+        }
+        public static string PathMaker(string ProjectName, string FileName, string path) {
+            string fs = "";
+            for (int i = 0; i < path.IndexOf(ProjectName); i++) {
+                fs += path[i];
+            } 
+            return Path.Combine(fs, ProjectName, @"Planilhas", FileName);
+        }
     }
 }
 

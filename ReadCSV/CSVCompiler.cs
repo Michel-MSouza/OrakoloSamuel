@@ -17,11 +17,11 @@ namespace ReadCSV {
 
         private string _path;
 
-        private List<Data> people;
+        private List<Data> data;
 
-        public List<Data> People {
-            get { return people; }
-            set { people = value; }
+        public List<Data> Data {
+            get { return data; }
+            set { data = value; }
         }
 
         public string FilePath {
@@ -30,11 +30,11 @@ namespace ReadCSV {
         }
 
         public CSVCompiler() {
-            this.People = new List<Data>();
+            this.Data = new List<Data>();
             this.Header = new List<string>();
         }
 
-        public void GetPath(string path) {
+        public void SetPath(string path) {
             this._path = path;
         }
 
@@ -83,11 +83,10 @@ namespace ReadCSV {
                             }
                         }
                     }
-
                     if (!p.Pairs.ContainsKey(this.Header[DicPage % (this.Header.Count)])) {
                         p.Pairs.Add(this.Header[DicPage % (this.Header.Count)], gettingFormat);
                     }
-                    this.People.Add(p);
+                    this.Data.Add(p);
                 }
             }
         }

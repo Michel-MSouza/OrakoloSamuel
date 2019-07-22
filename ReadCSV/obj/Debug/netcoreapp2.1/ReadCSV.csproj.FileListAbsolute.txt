@@ -11,3 +11,4 @@ C:\Users\Usuario\source\repos\OrakoloSamuel\ReadCSV\obj\Debug\netcoreapp2.1\Read
 C:\Users\Usuario\source\repos\OrakoloSamuel\ReadCSV\obj\Debug\netcoreapp2.1\ReadCSV.AssemblyInfo.cs
 C:\Users\Usuario\source\repos\OrakoloSamuel\ReadCSV\obj\Debug\netcoreapp2.1\ReadCSV.dll
 C:\Users\Usuario\source\repos\OrakoloSamuel\ReadCSV\obj\Debug\netcoreapp2.1\ReadCSV.pdb
+C:\Users\Usuario\source\repos\OrakoloSamuel\ReadCSV\obj\Debug\netcoreapp2.1\ReadCSV.csprojAssemblyReference.cache
